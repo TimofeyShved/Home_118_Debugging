@@ -11,6 +11,9 @@ public class Main {
         JButton button = new JButton("click"); // создаём кнопку
         button.setDebugGraphicsOptions(DebugGraphics.LOG_OPTION); // вывод логов по кнопке
         jPanel.add(button); // добавляем на панель
+
+        RepaintManager.currentManager(jFrame.getRootPane()).setDoubleBufferingEnabled(true); // для отоброжения всех изменений на форме
+        ((JComponent)jFrame.getContentPane()).setDebugGraphicsOptions(DebugGraphics.LOG_OPTION);
     }
 
     static JFrame getFrame(){
