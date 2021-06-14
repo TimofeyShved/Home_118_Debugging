@@ -5,19 +5,19 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) {
-        JFrame jFrame = getFrame();
-        JPanel jPanel = new JPanel();
-        jFrame.add(jPanel);
-        JButton button = new JButton("click");
-        button.setDebugGraphicsOptions(DebugGraphics.LOG_OPTION);
-        jPanel.add(button);
+        JFrame jFrame = getFrame(); // создаём форму
+        JPanel jPanel = new JPanel(); // панеь
+        jFrame.add(jPanel);  // соединяем
+        JButton button = new JButton("click"); // создаём кнопку
+        button.setDebugGraphicsOptions(DebugGraphics.LOG_OPTION); // вывод логов по кнопке
+        jPanel.add(button); // добавляем на панель
     }
 
     static JFrame getFrame(){
-        JFrame jFrame = new JFrame(){};
-        jFrame.setVisible(true);
-        jFrame.setBounds(200,200,200,200);
-        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        return jFrame;
+        JFrame jFrame = new JFrame(){}; // создание формы
+        jFrame.setVisible(true); // видимость
+        jFrame.setBounds(200,200,400,200); // размеры
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие
+        return jFrame; // вернуть форму на вызов
     }
 }
